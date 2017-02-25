@@ -1,0 +1,18 @@
+
+
+/*雪碧图实现*/
+input[type="radio"]{
+	margin:3px 3px 0px 5px;
+	display:none;	
+}
+
+#label1 {
+	padding:0px 8px 0px 8px;
+	background-image:url("../img/1.gif");
+	background-repeat:no-repeat;
+	background-position:;
+}
+/*伪元素实现*/
+.fake {
+	background-image:url(img/1.png);
+}
