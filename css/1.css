@@ -1,18 +1,113 @@
 
 
 /*雪碧图实现*/
-input[type="radio"]{
-	margin:3px 3px 0px 5px;
+input[type="radio"],input[type="checkbox"]{
+	margin:0px 0px 0px 0px;
 	display:none;	
 }
-
-#label1 {
+input.radio1[type="radio"]+label {
 	padding:0px 8px 0px 8px;
-	background-image:url("../img/1.gif");
+	background-image:url("../img/1.png");
 	background-repeat:no-repeat;
-	background-position:;
+	background-position:-24px -10px;
+}
+input.radio1[type="radio"]:checked+label {
+	padding:0px 8px 0px 8px;
+	background-image:url("../img/1.png");
+	background-repeat:no-repeat;
+	background-position:-59px -10px;
+}
+input.radio2[type="radio"]:checked+label {
+	padding:0px 8px 0px 8px;
+	background-image:url("../img/1.png");
+	background-repeat:no-repeat;
+	background-position:-59px -10px;
+}
+input.radio2[type="radio"]+label {
+	padding:0px 8px 0px 8px;
+	background-image:url("../img/1.png");
+	background-repeat:no-repeat;
+	background-position:-24px -10px;
+}
+input.checkbox1[type="checkbox"]+label {
+	padding:0px 8px 0px 8px;
+	background-image:url("../img/1.png");
+	background-repeat:no-repeat;
+	background-position:-24px -32px;
+}
+input.checkbox1[type="checkbox"]:checked+label {
+	padding:0px 8px 0px 8px;
+	background-image:url("../img/1.png");
+	background-repeat:no-repeat;
+	background-position:-59px -32px;
 }
 /*伪元素实现*/
-.fake {
-	background-image:url(img/1.png);
+
+input.radio3[type="radio"]+label::after {
+	content:"";
+	border-style:solid;
+	border-width:1px;
+	border-color:#DCDCDC;
+	border-radius:7px;
+	height: 14px;
+    width: 14px;
+	display:inline-block;
+}
+input.radio3[type="radio"]:checked+label::after {
+	content:'\2022';
+	line-height: 12px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#D83C30;
+	border-radius:7px;
+	font-size:1.5em;
+	text-align:center;
+	color:#D83C30;
+	height: 14px;
+    width: 14px;
+	display:inline-block;
+}
+input.radio4[type="radio"]+label::after {
+	content:"";
+	border-style:solid;
+	border-width:1px;
+	border-color:#DCDCDC;
+	border-radius:7px;
+	height: 14px;
+    width: 14px;
+	display:inline-block;
+}
+input.radio4[type="radio"]:checked+label::after {
+	content:'\2022';
+	line-height: 12px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#D83C30;
+	border-radius:7px;
+	font-size:1.5em;
+	text-align:center;
+	color:#D83C30;
+	height: 14px;
+    width: 14px;
+	display:inline-block;
+}
+input.checkbox2[type="checkbox"]+label::after {
+	content:"";
+	border-style:solid;
+	border-width:1px;
+	border-color:#DCDCDC;
+	height: 14px;
+    width: 14px;
+	display:inline-block;
+}
+input.checkbox2[type="checkbox"]:checked+label::after {
+	content:'\2611';
+	border:none;
+	line-height:12px;
+	font-size:1.3em;
+	text-align:center;
+	color:#D83C30;
+	height: 14px;
+    width: 14px;
+	display:inline-block;
 }
