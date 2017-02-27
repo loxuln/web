@@ -1,0 +1,57 @@
+/*初始化样式*/
+body{
+	position:relative;
+	width:800px;
+	padding-top:30px;
+	margin:0px auto 0px auto;
+	background:#DCDCDC;
+	border:none;
+}
+
+/*设置舞台样式*/
+.stage{
+	position:relative;
+	width:800px;
+	height:500px;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	perspective: 4000px;/*设置视角*/
+}
+
+
+/*定义动画*/
+@keyframes trans {
+	0%{transform: rotateY(0deg)translateZ(0px);}
+	16% {transform: rotateY(60deg)translateZ(0px);}
+	32% {transform: rotateY(120deg)translateZ(0px);}
+	48% {transform: rotateY(180deg)translateZ(0px);}
+	64% {transform: rotateY(240deg)translateZ(0px);}
+	82% {transform: rotateY(300deg)translateZ(0px);}
+	100% {transform: rotateY(360deg)translateZ(0px);}
+}
+/*设置容器样式*/
+.container{
+	position:relative;
+	width:600px;
+	height:500px;
+	margin:0px auto 0px auto;
+	transform-style:preserve-3d;/*图片3D显示*/
+	backface-visibility:hidden;/*设置背面不可见*/
+	animation: trans 10s ease 0s 50000 normal;/*设置动画属性*/
+    
+}
+
+/*设置图片样式*/
+img {
+	position:absolute;
+	width:400px;
+	margin:100px 100px 0px 100px;
+}
+
+/*设置单个图片角度*/
+img.aa{transform: rotateY(0deg)translateZ(406.41px);}
+img.bb{transform: rotateY(60deg)translateZ(406.41px);}
+img.cc{transform: rotateY(120deg)translateZ(406.41px);}
+img.dd{transform: rotateY(180deg)translateZ(406.41px);}
+img.ee{transform: rotateY(240deg)translateZ(406.41px);}
+img.ff{transform: rotateY(300deg)translateZ(406.41px);}
