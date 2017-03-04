@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>基础JavaScript练习（一）</title>
+	<style>
+        input[type="button"]{
+		  display:inline-block;
+		   height:18px;
+		   width:50px;
+		   text-align:center;
+		   padding:0px 0px 0px 0px;
+		   background-color:#ffffff;
+		   border:1px solid #DCDCDC;
+		   border-radius:3px;
+		   font-size:12px; 
+		}
+		p {
+		   display:inline-block;
+		   padding:5px 5px;
+		   margin:10px 2px;
+		   height:50px;
+		   background-color:#FF0000;
+		   font-size:2.3em;
+		   cursor:pointer;
+		}
+    </style>
+  </head>
+<body>
+<div id="setting">
+     <input type="text" id="text-input"></input>
+     <input type="button" id="left-in" value="左侧入"></input>
+     <input type="button" id="right-in" value="右侧入"></input>&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="button" id="left-out" value="左侧出"></input>
+     <input type="button" id="right-out" value="右侧出"></input>
+</div>
+<div id="out">
+</div>
+<script type="text/javascript">
+     /*
+	    初始化
+	 */
+	 function init(){
+	     var leftIn=document.getElementById("left-in");
+	     var rightIn=document.getElementById("right-in");
+	     var leftOut=document.getElementById("left-out");
+	     var rightOut=document.getElementById("right-out");
+	     leftIn.addEventListener("click",clickLeftIn);
+	     rightIn.addEventListener("click",clickRightIn);
+	     leftOut.addEventListener("click",clickLeftOut);
+	     rightOut.addEventListener("click",clickRightOut);
+	 }
+	 /*
+	    左侧入函数
+	 */
+	 function clickLeftIn(){
+	      var out=document.getElementById("out");
+		  var blocks=document.createElement("p");
+		  blocks.addEventListener("click",function(){deletep(this);});//利用匿名函数传参
+		  out.insertBefore(blocks,out.firstChild);//左侧入
+		  var text=document.getElementById("text-input").value;
+		  blocks.innerText=text;
+	 }
+	 /*
+	    右侧入函数
+	 */
+	 function clickRightIn(){
+	      var out=document.getElementById("out");
+		  var blocks=document.createElement("p");
+		  blocks.addEventListener("click",function(){deletep(this);});
+		  out.appendChild(blocks);//右侧入
+		  var text=document.getElementById("text-input").value;
+		  blocks.innerText=text;
+		}
+	 /*
+	    左侧出函数
+	 */
+	 function clickLeftOut(){
+	      var out=document.getElementById("out");
+		  out.removeChild(out.firstChild);
+		}
+	  /*
+	    右侧出函数
+	  */
+	 function clickRightOut(){
+	      var out=document.getElementById("out");
+		  out.removeChild(out.lastChild);
+	 }
+	 /*
+	    点击删除函数
+	 */
+	 function deletep(node){
+	      var nodes=node.parentNode;
+	      nodes.removeChild(node);
+	     
+	 }
+	 init();
+
+</script>
+</body>
+</html>
