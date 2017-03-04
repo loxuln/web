@@ -5,3 +5,4 @@
 ###3.[零基础JavaScript编码（一)](https://luocoding.github.io/web/ife/零基础JavaScript编码（一）/3.html)
 ###4.[零基础JavaScript编码（二)](https://luocoding.github.io/web/ife/零基础JavaScript编码（二）/index.html)
 ###5.[零基础JavaScript编码（三)](https://luocoding.github.io/web/ife/零基础JavaScript编码（三）/index.html)
+###6.[基础JavaScript练习（一）]()
