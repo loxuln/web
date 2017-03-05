@@ -54,23 +54,25 @@
 	    左侧入函数
 	 */
 	 function clickLeftIn(){
+	      var text=document.getElementById("text-input").value;
+		  if(text.length===0){alert("输入为空");}else{
 	      var out=document.getElementById("out");
 		  var blocks=document.createElement("p");
 		  blocks.addEventListener("click",function(){deletep(this);});//利用匿名函数传参
 		  out.insertBefore(blocks,out.firstChild);//左侧入
-		  var text=document.getElementById("text-input").value;
-		  blocks.innerText=text;
+		  blocks.innerText=text;}
 	 }
 	 /*
 	    右侧入函数
 	 */
 	 function clickRightIn(){
+	      var text=document.getElementById("text-input").value;
+		  if(text.length===0){alert("输入为空");}else{
 	      var out=document.getElementById("out");
 		  var blocks=document.createElement("p");
 		  blocks.addEventListener("click",function(){deletep(this);});
 		  out.appendChild(blocks);//右侧入
-		  var text=document.getElementById("text-input").value;
-		  blocks.innerText=text;
+		  blocks.innerText=text;}
 		}
 	 /*
 	    左侧出函数

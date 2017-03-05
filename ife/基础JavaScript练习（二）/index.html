@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>基础JavaScript练习（二）</title>
+	<style>
+        input[type="button"]{
+		   display:inline-block;
+		   height:18px;
+		   width:50px;
+		   text-align:center;
+		   padding:0px 0px 0px 0px;
+		   background-color:#ffffff;
+		   border:1px solid #DCDCDC;
+		   border-radius:3px;
+		   font-size:12px; 
+		}
+		p {
+		   position:relative;
+		   display:inline-block;
+		   width:40px;
+		   padding-top:4px;
+		   padding-bottom:4px;
+		   margin:20px 1px;
+		   background-color:#FF0000;
+		   line-height:10px;
+		   text-align:center;
+		   color:#000000;
+		   cursor:pointer;
+		}
+		
+		
+		
+    </style>
+  </head>
+<body>
+<div id="setting">
+     <input type="text" id="text-input" placeholder="请输入10-100的数字"maxlength="3"></input>
+     <input type="button" id="left-in" value="左侧入"></input>
+     <input type="button" id="right-in" value="右侧入"></input>&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="button" id="left-out" value="左侧出"></input>
+     <input type="button" id="right-out" value="右侧出"></input>
+	 <input type="button" id="bubble" value="冒泡排序"></input>
+</div>
+<div id="out">
+</div>
+<script type="text/javascript">
+     /*
+	    初始化
+	 */
+	 function init(){
+	     var leftIn=document.getElementById("left-in");
+	     var rightIn=document.getElementById("right-in");
+	     var leftOut=document.getElementById("left-out");
+	     var rightOut=document.getElementById("right-out");
+		 var bubble=document.getElementById("bubble");
+		 leftIn.addEventListener("click",checkValue1);
+		 rightIn.addEventListener("click",checkValue2);
+	     leftOut.addEventListener("click",clickLeftOut);
+	     rightOut.addEventListener("click",clickRightOut);
+		 bubble.addEventListener("click",clickBubble);
+	 }
+	 /*
+	   检查输入值，使只能输入数字
+	 */
+	 function checkValue1(){
+	      var text=document.getElementById("text-input").value;
+		  var patt=RegExp(/^\d+$/);//正则表达式匹配数字
+		  var textValue=patt.test(text);
+		  if(!textValue){alert("输入不合法！");}
+		  else {clickLeftIn();}
+		  
+	   }
+	  function checkValue2(){
+	      var text=document.getElementById("text-input").value;
+		  var patt=RegExp(/^\d+$/);
+		  var textValue=patt.test(text);
+		  if(!textValue){alert("输入不合法！");}
+		  else {clickRightIn();}
+		  
+	   }
+	   
+	 /*
+	    左侧入函数
+	 */
+	 function clickLeftIn(){
+	      var text=document.getElementById("text-input").value;
+		  var text1=document.getElementsByTagName("p");
+		  if (text1.length>60) {alert("队列超过60！");}else{
+		  if(text<10||text>100){alert("输入超过范围！");}else{
+	      var out=document.getElementById("out");
+		  var blocks=document.createElement("p");
+		  var h=text+"px";//让高随着输入值的变化而变化
+		  var dh=(100-text)+"px";
+		  blocks.style.height=h;
+		  blocks.style.top=dh;
+		  
+		  blocks.addEventListener("click",function(){deletep(this);});//利用匿名函数传参
+		  out.insertBefore(blocks,out.firstChild);//左侧入
+		  blocks.innerText=text;}}
+	 }
+	 /*
+	    右侧入函数
+	 */
+	 function clickRightIn(){
+	      var text=document.getElementById("text-input").value;
+		  var text1=document.getElementsByTagName("p");
+		  if (text1.length>60) {alert("队列超过60！");}else{
+		  if(text<10||text>100){alert("输入超过范围！");}else{
+	      var out=document.getElementById("out");
+		  var blocks=document.createElement("p");
+		  var h=text+"px";//让高随着输入值的变化而变化
+		  var dh=(100-text)+"px";
+		  blocks.style.height=h;
+		  blocks.style.top=dh;
+		  blocks.addEventListener("click",function(){deletep(this);});
+		  out.appendChild(blocks);//右侧入
+		  blocks.innerText=text;}}
+		}
+	 /*
+	    左侧出函数
+	 */
+	 function clickLeftOut(){
+	      var out=document.getElementById("out");
+		  out.removeChild(out.firstChild);
+		}
+	  /*
+	    右侧出函数
+	  */
+	 function clickRightOut(){
+	      var out=document.getElementById("out");
+		  out.removeChild(out.lastChild);
+	 }
+	 /*
+	    点击删除函数
+	 */
+	 function deletep(node){
+	      var nodes=node.parentNode;
+	      nodes.removeChild(node);  
+	 }
+	 /*
+	   冒泡排序
+	 */
+	 function clickBubble(){
+	      var text=document.getElementsByTagName("p");
+		  var i=text.length,j;
+		  var tempExchangVal;
+          while (i > 0) {
+             for (j = 0; j < i - 1; j++) {
+                 if (text[j].innerText > text[j + 1].innerText) {
+                     tempExchangVal = text[j].innerText;
+                     text[j].innerText = text[j + 1].innerText;
+                     var h1=text[j].innerText+"px";
+					 var dh1=(100-text[j].innerText)+"px";
+					 text[j].style.height=h1;
+					 text[j].style.top=dh1;
+					 text[j+1].innerText = tempExchangVal;
+					 var h=text[j+1].innerText+"px";
+					 var dh=(100-text[j+1].innerText)+"px";
+					 text[j+1].style.height=h;
+					 text[j+1].style.top=dh;
+					 
+                    }
+                }
+                    i--;
+            }
+        }
+	 
+	 init();
+
+</script>
+</body>
+</html>
