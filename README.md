@@ -5,4 +5,5 @@
 ###3.[零基础JavaScript编码（一)](https://luocoding.github.io/web/ife/零基础JavaScript编码（一）/3.html)
 ###4.[零基础JavaScript编码（二)](https://luocoding.github.io/web/ife/零基础JavaScript编码（二）/index.html)
 ###5.[零基础JavaScript编码（三)](https://luocoding.github.io/web/ife/零基础JavaScript编码（三）/index.html)
-###6.[基础JavaScript练习（一）](https://luocoding.github.io/web/ife/%E5%9F%BA%E7%A1%80JavaScript%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html)
+###6.[基础JavaScript练习（一）](https://luocoding.github.io/web/ife/基础JavaScript练习（一）/index.html)
+###7.[基础JavaScript练习（二）js dom 冒泡排序](https://luocoding.github.io/web/ife/基础JavaScript练习（二）/index.html)
