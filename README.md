@@ -7,3 +7,4 @@
 ###5.[零基础JavaScript编码（三)](https://luocoding.github.io/web/ife/零基础JavaScript编码（三）/index.html)
 ###6.[基础JavaScript练习（一）](https://luocoding.github.io/web/ife/基础JavaScript练习（一）/index.html)
 ###7.[基础JavaScript练习（二）js dom 冒泡排序](https://luocoding.github.io/web/ife/基础JavaScript练习（二）/index.html)
+###8.[基础JavaScript练习（二）字符串分割 模糊查询](https://luocoding.github.io/web/ife/基础JavaScript练习（三）/index.html)
