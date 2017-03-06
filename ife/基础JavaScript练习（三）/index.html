@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>基础JavaScript练习（一）</title>
+	<style>
+	   
+       input[type="button"]{
+		   display:inline-block;
+		   height:18px;
+		   width:50px;
+		   text-align:center;
+		   padding:0px 0px 0px 0px;
+		   background-color:#ffffff;
+		   border:1px solid #DCDCDC;
+		   border-radius:3px;
+		   font-size:12px; 
+		}
+        textarea{
+		   display:inline-block;
+		   height:20px;
+		   padding:0px 0px;
+		   
+		}	
+        p {
+		   display:inline-block;
+		   margin:2px 2px;
+		   border:1px solid #FF0000;
+		   color:#FF0000;
+		}		
+		
+    </style>
+  </head>
+<body>
+<div id="setting">
+     <textarea id="text"rows="1" cols="30"required></textarea>
+	 <input type="button" id="submit" value="提交"></input>
+	 <input type="search" id="sbmt" ></input>
+	 <input type="button" id="srch" value="搜索"></input>
+     
+</div>
+<div id="out">
+</div>
+<script type="text/javascript">
+    /*
+	   初始化
+	*/
+	function init(){
+	   var text=document.getElementById("text");
+	   var submit=document.getElementById("submit");
+	   var srch=document.getElementById("srch");
+	   submit.addEventListener("click",clickSubmit);
+	   srch.addEventListener("click",clickSearch);
+	}
+	/*
+	 提交分词
+	*/
+	function clickSubmit(){
+	   var text=document.getElementById("text").value;
+	   console.log(text.length);
+	   if(text.length==0){alert("文本框为空值！");}else{
+	   var content=text.match(/([^,，、\s]+)/g);//利用正则表达式提取多个内容
+	   for(var i=0;i<content.length;i++){
+	       var out=document.getElementById("out");
+	       var word=document.createElement("p");
+	       word.innerText=content[i];
+	       out.appendChild(word);
+	   }}
+	}
+	/*
+	  搜索模糊匹配
+	*/
+	function clickSearch(){
+	    var text=document.getElementById("sbmt").value;
+		if(text.length==0){alert("搜索框为空值！");}else{
+		var word=new RegExp(text);
+		var words=document.getElementsByTagName("p");
+		for(var i=0;i<words.length;i++){//利用循环实现模糊匹配
+		    var newWord=word.exec(words[i].innerText);
+			if(newWord==null){continue;}else{
+			var change="<font color='#000000'>"+newWord[0]+"</font>";
+			words[i].innerHTML=words[i].innerHTML.replace(newWord[0],change);}
+		}}
+		
+	}
+	init();
+
+</script>
+</body>
+</html>
