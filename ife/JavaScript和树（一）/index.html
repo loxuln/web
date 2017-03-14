@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript和树（一）</title>
+	<style>
+	   #container{
+	      display:flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+		  min-width:600px;
+		  justify-content: center;
+		  margin:auto;
+		  
+	   }
+	   div{
+	      border:2px solid #FF0000; 
+	   }
+	   #childone,#childtwo{
+	      display:flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+	      width:300px;
+		  height:100px;
+		  border-top-width:6px;
+		  border-bottom-width:6px;
+		  border-left-width:16px;
+		  border-right-width:16px;
+		  margin:2px;
+	   }
+	   #cone,#ctwo,#cthree,#cfour{
+	      display:flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+	      width:105px;
+		  height:80px;
+		  margin:8px 20px ;
+		  
+	   }
+	   #ccone,#cctwo,#ccthree,#ccfour,#ccfive,#ccsix,#ccseven,#cceight{
+	     
+	      width:15px;
+		  height:60px;
+		  margin:6px 16px ;
+		  
+	   }
+	
+	</style>
+  </head>
+<body>
+   <div id="container">
+       <div id="childone">
+	       <div id="cone">
+		       <div id="ccone">&nbsp;</div>
+		       <div id="cctwo">&nbsp;</div>
+		   </div>
+		   <div id="ctwo">
+		       <div id="ccthree">&nbsp;</div>
+		       <div id="ccfour">&nbsp;</div>
+		   </div>
+	   
+	   </div>
+       <div id="childtwo">
+	       <div id="cthree">
+		       <div id="ccfive">&nbsp;</div>
+		       <div id="ccsix">&nbsp;</div>
+		   </div>
+		   <div id="cfour">
+		       <div id="ccseven">&nbsp;</div>
+		       <div id="cceight">&nbsp;</div>
+		   </div>
+	   
+	   </div>
+   </div>
+  
+
+   <script type="text/javascript">
+
+  
+
+   </script>
+</body>
+</html>
