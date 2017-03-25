@@ -136,6 +136,39 @@ function move() {
 			changeColor();   
         }
     });
+    $("#container").swipe({
+        swipeRight:function(event, direction, distance, duration, fingerCount) {
+            var ddd=getarr("right");
+            var dddd=controlMove(ddd,"ischeck");	
+            addValue(dddd,"right");
+            checkOff();
+            countScore();	
+			random2();
+			changeColor(); 
+        }
+    });
+    $("#container").swipe({
+        swipeUp:function(event, direction, distance, duration, fingerCount) {
+            var aaa=getarr("up");
+            var aaaa=controlMove(aaa,"ischeck");	
+            addValue(aaaa,"up");
+            checkOff();
+            countScore();	
+			random2();
+			changeColor(); 
+        }
+    });
+    $("#container").swipe({
+        swipeDown:function(event, direction, distance, duration, fingerCount) {
+            var bbb=getarr("down");
+            var bbbb=controlMove(bbb,"ischeck");	
+            addValue(bbbb,"down");
+            checkOff();
+            countScore();	
+			random2();
+			changeColor(); 
+        }
+    });
 	
 }
 // 计分
