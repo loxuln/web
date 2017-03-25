@@ -9,4 +9,4 @@
 ### 7.[基础JavaScript练习（二）js dom 冒泡排序](https://luocoding.github.io/web/ife/基础JavaScript练习（二）/index.html)<br>
 ### 8.[基础JavaScript练习（二）字符串分割 模糊查询](https://luocoding.github.io/web/ife/基础JavaScript练习（三）/index.html)<br>
 ### 9.[调色板（colorpicker）](https://luocoding.github.io/web/%E8%B0%83%E8%89%B2%E6%9D%BF/index.html)<br>
-###10.[2048 2048game](https://luocoding.github.io/web/2048/index.html)<br>
+### 10.[2048（2048）](https://luocoding.github.io/web/2048/index.html)<br>
