@@ -3,7 +3,7 @@ body{
 	padding: 0px;
 
 }
-@media screen and (min-width: 420px) ｛
+@media screen and (min-width: 420px) {
 #container{
 	position: relative;
 	top: 0px;
@@ -50,13 +50,13 @@ td{
 	background-color: #CCC0B2;
 }
 }
-@media screen and (max-width: 420px) ｛
+@media screen and (max-width: 420px) {
 #container{
 	position: relative;
 	top: 0px;
 	left: 0px;
-	width: 300px;
-	height: 300px;
+	width: 355px;
+	height: 400px;
 	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;

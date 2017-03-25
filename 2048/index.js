@@ -196,6 +196,9 @@ function init(){
 	move();
 	// 改变颜色
 	changeColor();
+	$('body').on('touchmove', function (event) {
+    event.preventDefault();
+});
 	
 }
 //初始化
