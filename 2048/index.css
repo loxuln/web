@@ -74,7 +74,7 @@ td{
 #mainpanel{
 	position: relative; 
 	width: 350px;
-	height: 350px;
+	height: 342px;
 	margin: auto; 
 	border-radius: 5px;
 	background-color: #B8AF9E;
@@ -85,7 +85,7 @@ table,tr,td{
 
 }
 table{
-	width: 350px;
+	width: 349px;
 	height: 350px;
 
 
@@ -94,7 +94,7 @@ td{
 	width: 35px;
 	height: 35px;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1em;
 	background-color: #CCC0B2;
 }
 }
