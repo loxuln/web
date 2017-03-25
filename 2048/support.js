@@ -54,35 +54,7 @@ function controlMove(a,ischeck){
 	}
 	return a.slice(l);        
 }
-//合并算法
-/*function addSum(arro){
-	
-	var len=arro.length;
-	var m=0,n=0;
-	for(;n<len;n++){
-	for(var i=0;i<len;i++) {
-		m=i+1;
-		if(i!==3){
-		if(arro[i]==0&&arro[m]!==0){arro[i]=arro[m];arro[m]=0;continue;}
-		if(arro[i]==0&&arro[m]==0){continue;}
-		if(arro[i]!==0&&arro[m]==0){continue;}
-		if(arro[i]!==0&&arro[m]!==0){
-			if(arro[i]==arro[m]){
-				arro[i]=2*arro[m];
-				arro[m]=0;
-				continue;
-			}else{
-				continue;
-			}
-		}
-	}else{break;}
-    }
-}
 
-
-    return arro;
-
-}*/
 //合并算法
 function addSum(arro,ischeck){
 	

@@ -3,6 +3,7 @@ body{
 	padding: 0px;
 
 }
+@media screen and (min-width: 420px) ｛
 #container{
 	position: relative;
 	top: 0px;
@@ -47,4 +48,53 @@ td{
 	text-align: center;
 	font-size: 3em;
 	background-color: #CCC0B2;
+}
+}
+@media screen and (max-width: 420px) ｛
+#container{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	height: 300px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #BFBFBF;
+
+}
+#title{
+	position: relative;
+	text-align: center;
+	margin: 0px;
+}
+#mainpanel{
+	position: relative; 
+	width: 350px;
+	height: 350px;
+	margin: auto; 
+	border-radius: 5px;
+	background-color: #B8AF9E;
+}
+table,tr,td{
+	margin: 0px;
+	padding: 0px;
+
+}
+table{
+	width: 350px;
+	height: 350px;
+
+
+}
+td{ 
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	font-size: 1.5em;
+	background-color: #CCC0B2;
+}
 }
