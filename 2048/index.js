@@ -125,6 +125,17 @@ function move() {
 
 		}
 	}
+	$("#container").swipe({
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+            var ccc=getarr("left");
+            var cccc=controlMove(ccc,"ischeck");	
+            addValue(cccc,"left");
+            checkOff();
+            countScore();	
+			random2();
+			changeColor();   
+        }
+    });
 	
 }
 // 计分
@@ -140,6 +151,7 @@ function countScore() {
 
 
 }
+
 //初始化函数
 function init(){
 	// 初始数组
