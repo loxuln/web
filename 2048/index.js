@@ -125,51 +125,7 @@ function move() {
 
 		}
 	}
-	$(window).swipe({
-
-        swipeLeft:function(){
-        // 向左滑动执行
-        var ccc=getarr("left");
-            var cccc=controlMove(ccc,"ischeck");	
-            addValue(cccc,"left");
-            checkOff();
-            countScore();	
-			random2();
-			changeColor();
-
-    },
-        swipeRight:function(){
-        // 向右滑动执行
-        var ddd=getarr("right");
-            var dddd=controlMove(ddd,"ischeck");	
-            addValue(dddd,"right");
-            checkOff();
-            countScore();	
-			random2();
-			changeColor();
-    }
-        swipeUp:function(){
-        // 向上滑动执行
-        var aaa=getarr("up");
-            var aaaa=controlMove(aaa,"ischeck");	
-            addValue(aaaa,"up");
-            checkOff();
-            countScore();	
-			random2();
-			changeColor();
-    },
-        swipeDown:function(){
-        // 向下滑动执行
-        var bbb=getarr("down");
-            var bbbb=controlMove(bbb,"ischeck");	
-            addValue(bbbb,"down");
-            checkOff();
-            countScore();	
-			random2();
-			changeColor();
-    }
-});
-
+	
 }
 // 计分
 function countScore() {
