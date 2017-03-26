@@ -233,9 +233,6 @@ function init(){
 	move();
 	// 改变颜色
 	changeColor();
-	//var i=[[2,0,0,2],[2,0,0,2],[2,0,0,2],[2,0,0,2]];
-	//console.log(i.toString());
-	//console.log(controlMove(i).toString());
 	$('body').on('touchmove', function (event) {
     event.preventDefault();
 });
