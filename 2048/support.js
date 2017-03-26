@@ -50,9 +50,10 @@ function controlMove(a,ischeck){
 	var len=a.length;
 	var l=len;
 	for(var i=0;i<len;i++){
-		a.push(addSum(a[i],ischeck));
+		//a.push(addSum(a[i],ischeck));
+		addSum(a[i],ischeck);
 	}
-	return a.slice(l);        
+	return a;        
 }
 
 //合并算法

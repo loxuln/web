@@ -87,40 +87,61 @@ function move() {
 		var key=e&&e.keyCode;
 		if(key==38) {//上
 			var a=getarr("up");
-            var aa=controlMove(a,"ischeck");	
+			var asa=a.toString();
+            var aa=controlMove(a,"ischeck");
+            var aoa=aa.toString();
             addValue(aa,"up");
             checkOff();
-            countScore();	
-			random2();
+            countScore();
+            if(asa!==aoa){
+            	random2();
+            }
+            	
+			
 			changeColor();
 		}
+
 		if (key==40) {//下
 			var b=getarr("down");
+			var bsb=b.toString();
             var bb=controlMove(b,"ischeck");	
             addValue(bb,"down");
             checkOff();
             countScore();	
-			random2();
+            var bob=bb.toString();
+			if(bsb!==bob){
+            	random2();
+            }	
 			changeColor();
 
 		}
 		if (key==37) {//左
 			var c=getarr("left");
+			var csc=c.toString();
             var cc=controlMove(c,"ischeck");	
             addValue(cc,"left");
             checkOff();
             countScore();	
-			random2();
+            var coc=cc.toString();
+            
+			if(csc!==coc){
+            	random2();
+            }	
 			changeColor();
 
 		}
 		if (key==39) {//右
 			var d=getarr("right");
+			var dsd=d.toString();
             var dd=controlMove(d,"ischeck");	
             addValue(dd,"right");
             checkOff();
             countScore();	
-			random2();
+            var dod=dd.toString();
+            
+			if(dsd!==dod){
+            	random2();
+            }	
 			changeColor();
 
 		}
@@ -128,44 +149,60 @@ function move() {
 	$("#container").swipe({
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
             var ccc=getarr("left");
-            var cccc=controlMove(ccc,"ischeck");	
+            var cfc=ccc.toString();
+            var cccc=controlMove(ccc,"ischeck");
+            var cpc=cccc.toString();	
             addValue(cccc,"left");
             checkOff();
             countScore();	
-			random2();
+			if(cfc!==cpc){
+            	random2();
+            }		
 			changeColor();   
         }
     });
     $("#container").swipe({
         swipeRight:function(event, direction, distance, duration, fingerCount) {
             var ddd=getarr("right");
+            var dfd=ddd.toString();
             var dddd=controlMove(ddd,"ischeck");	
+            var dpd=dddd.toString();
             addValue(dddd,"right");
             checkOff();
             countScore();	
-			random2();
+			if(dfd!==dpd ){
+            	random2();
+            }		
 			changeColor(); 
         }
     });
     $("#container").swipe({
         swipeUp:function(event, direction, distance, duration, fingerCount) {
             var aaa=getarr("up");
-            var aaaa=controlMove(aaa,"ischeck");	
+            var afa=aaa.toString();
+            var aaaa=controlMove(aaa,"ischeck");
+            var apa=aaaa.toString();	
             addValue(aaaa,"up");
             checkOff();
-            countScore();	
-			random2();
+            countScore();	 
+			if(afa!==apa){
+            	random2();
+            }		
 			changeColor(); 
         }
     });
     $("#container").swipe({
         swipeDown:function(event, direction, distance, duration, fingerCount) {
             var bbb=getarr("down");
-            var bbbb=controlMove(bbb,"ischeck");	
+            var bfb=bbb.toString();
+            var bbbb=controlMove(bbb,"ischeck");
+            var bpb=bbbb.toString();	
             addValue(bbbb,"down");
             checkOff();
             countScore();	
-			random2();
+			if(bfb!==bpb){
+            	random2();
+            }		
 			changeColor(); 
         }
     });
@@ -196,6 +233,9 @@ function init(){
 	move();
 	// 改变颜色
 	changeColor();
+	//var i=[[2,0,0,2],[2,0,0,2],[2,0,0,2],[2,0,0,2]];
+	//console.log(i.toString());
+	//console.log(controlMove(i).toString());
 	$('body').on('touchmove', function (event) {
     event.preventDefault();
 });
